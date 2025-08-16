@@ -42,7 +42,11 @@ SirenX Desktop is the evolution of the original SirenX web application, bringing
 
 ## 📱 Screenshots
 
-*Screenshots coming soon - showcasing the 3D editor, lighting grid, and file management interface*
+<div align="center">
+  <img src="assets/screen1.png" alt="SirenX Desktop" width="300">
+  <img src="assets/screen2.png" alt="SirenX Desktop" width="300">
+  <img src="assets/screen3.png" alt="SirenX Desktop" width="300">
+</div>
 
 ## 🤝 Community & Support
 
