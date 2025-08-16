@@ -1,0 +1,204 @@
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #007acc, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-screen h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  background: linear-gradient(135deg, #007acc, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-subtitle {
+  font-size: 20px;
+  color: #cccccc;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.welcome-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.welcome-hint {
+  font-size: 14px;
+  color: #888888;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
+  position: relative;
+  z-index: 10;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.app-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  gap: 16px;
+  padding: 16px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  max-height: calc(100vh - 80px); /* Ensure it doesn't extend beyond screen */
+}
+
+.left-panel,
+.right-panel {
+  min-width: 0;
+  background: #1a1a1a;
+  padding: 16px;
+  border-radius: 8px;
+  overflow: hidden; /* Prevent content from extending beyond panel */
+  max-height: 100%; /* Ensure panel doesn't exceed container height */
+}
+
+.center-panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1a;
+  padding: 16px;
+  border-radius: 8px;
+  overflow: hidden; /* Prevent content from extending beyond panel */
+  max-height: 100%; /* Ensure panel doesn't exceed container height */
+}
+
+/* Button styles */
+.btn-primary {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #007acc, #005a99);
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 122, 204, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0088e6, #0066cc);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  padding: 8px 16px;
+  background: #3a3a3a;
+  border: 1px solid #4a4a4a;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #4a4a4a;
+  border-color: #5a5a5a;
+}
+
+.btn-secondary:active {
+  background: #2a2a2a;
+}
+
+/* Responsive design */
+@media (max-width: 1400px) {
+  .app-main {
+    grid-template-columns: 280px 1fr 280px;
+    gap: 12px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .app-main {
+    grid-template-columns: 250px 1fr 250px;
+    gap: 8px;
+    padding: 8px;
+  }
+}

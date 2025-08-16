@@ -1,0 +1,134 @@
+.sirenx-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Background Logo Variant */
+.sirenx-logo.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+}
+
+.logo-background-image {
+  max-width: 80%;
+  max-height: 80%;
+  height: auto;
+  filter: grayscale(30%) brightness(1.2);
+  opacity: 0.8;
+}
+
+/* Size Variants */
+.sirenx-logo.small {
+  transform: scale(0.6);
+}
+
+.sirenx-logo.medium {
+  transform: scale(0.8);
+}
+
+.sirenx-logo.large {
+  transform: scale(1);
+}
+
+/* Logo Image */
+.logo-image {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* Logo Text Overlay (Optional) */
+.logo-text {
+  text-align: center;
+}
+
+.sirenx-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.siren {
+  color: #2c3e50;
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.5),
+    0 0 20px rgba(44, 62, 80, 0.3);
+}
+
+.x {
+  color: #00ffff;
+  text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.5),
+    0 0 30px #00ffff,
+    0 0 60px #00ffff;
+  animation: x-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes x-glow {
+  0% { 
+    text-shadow: 
+      2px 2px 4px rgba(0,0,0,0.5),
+      0 0 30px #00ffff,
+      0 0 60px #00ffff;
+  }
+  100% { 
+    text-shadow: 
+      2px 2px 4px rgba(0,0,0,0.5),
+      0 0 40px #00ffff,
+      0 0 80px #00ffff;
+  }
+}
+
+.desktop-text {
+  font-size: 1.5rem;
+  color: #34495e;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sirenx-logo.large {
+    transform: scale(0.8);
+  }
+  
+  .sirenx-text {
+    font-size: 2.5rem;
+  }
+  
+  .desktop-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sirenx-logo.large {
+    transform: scale(0.6);
+  }
+  
+  .sirenx-text {
+    font-size: 2rem;
+  }
+  
+  .desktop-text {
+    font-size: 1rem;
+  }
+}
